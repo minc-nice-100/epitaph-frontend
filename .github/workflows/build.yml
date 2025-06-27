@@ -1,21 +1,25 @@
-name: Deploy Vue app
+name: Build & Deploy Vue to GitHub Pages
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write  # allows pushing to gh-pages branch
+
 jobs:
-  deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy with pnpm
-        uses: xinthink/vue-to-ghpages@v1
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - id: build_vue
+        uses: nvkomata/VuePagesAction@1.0.1
         with:
-          node-version: 18
-          pnpm-version: 8
-          publish-dir: dist
-          publish-branch: deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ github.repository_owner }}
+          reponame: ${{ github.event.repository.name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          useyarn: false
