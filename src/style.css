@@ -86,3 +86,7 @@ hr {
     width: calc(100vw - 200px);
     margin: 20px auto;
 }
+
+html {
+    filter: grayscale(100);
+}
