@@ -1,0 +1,88 @@
+/*
+Created by Sean L. on Jun. 28.
+Last Updated by Sean L. on Jun. 28.
+
+Epitaph - Frontend
+src/style.css
+
+Makabaka1880, 2025. All rights reserved.
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s, transform 0.3s;
+}
+a:hover {
+    text-decoration: underline;
+    color: var(--light-cyan);
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --bg-gray: #aaa;
+    --light-cyan: #0aa;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;  /* Reset margin */
+}
+
+.hstack {
+    display: flex;
+    align-items: center;
+}
+
+.heading-box {
+    display: flex;
+}
+
+.padding-h {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.padding-h-sub {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.padding-top {
+    padding-top: 100px;
+}
+.padding-top-sub {
+    padding-top: 50px;
+}
+
+.padding-bottom {
+    padding-bottom: 100px;
+}
+
+.padding-v {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.expanded-between {
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--bg-gray);
+    width: calc(100vw - 200px);
+    margin: 20px auto;
+}
