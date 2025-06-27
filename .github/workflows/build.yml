@@ -1,4 +1,4 @@
-name: Build and Deploy Vue App to gh-pages
+name: Deploy Vue app
 
 on:
   push:
@@ -6,31 +6,16 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Deploy with pnpm
+        uses: xinthink/vue-to-ghpages@v1
         with:
-          node-version: '18'
-          cache: 'pnpm'
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build Vue app
-        run: pnpm run build
-
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: deploy
+          node-version: 18
+          pnpm-version: 8
+          publish-dir: dist
+          publish-branch: deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
