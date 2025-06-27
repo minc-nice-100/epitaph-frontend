@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - id: build_vue
-        uses: nvkomata/VuePagesAction@1.0.1
+        uses: nvkomata/VuePagesAction@1.1
         with:
           username: ${{ github.repository_owner }}
           reponame: ${{ github.event.repository.name }}
