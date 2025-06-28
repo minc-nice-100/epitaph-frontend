@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
-// import About from './views/Message.vue'
+import Messages from './views/Messages.vue'
 
 const routes = [
     { path: '/', component: Home },
-    { path: '/messages', component: About }
+    { path: '/messages', component: Messages }
 ]
 
 const router = createRouter({
@@ -12,4 +12,4 @@ const router = createRouter({
     routes
 })
 
-export default router
+export default router;
