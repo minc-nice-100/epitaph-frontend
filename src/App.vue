@@ -1,5 +1,4 @@
 <script setup>
-import Home from './views/Home.vue';
 import './style.css'
 </script>
 
