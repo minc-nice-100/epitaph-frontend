@@ -8,6 +8,8 @@ src/style.css
 Makabaka1880, 2025. All rights reserved.
 */
 
+@import url('padding.css');
+
 html {
     scroll-behavior: smooth;
 }
