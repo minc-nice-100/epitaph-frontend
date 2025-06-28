@@ -1,47 +1,115 @@
 /*
 Created by Sean L. on Jun. 28.
-Last Updated by Sean L. on Jun. 28.
+Last Updated by Sean L. on Jun. 29.
 
 Epitaph - Frontend
 src/padding.css
 
 Provides tailwind-styled padding classes for usage.
-
-TODO: Make responsive / update to responsive pixels @ABloom
-
 Makabaka1880, 2025. All rights reserved.
 */
 
+:root {
+    --spacing-xs: 10px;
+    --spacing-sm: 20px;
+    --spacing-md: 40px;
+    --spacing-lg: 60px;
+    --spacing-xl: 100px;
+}
+
+/* Horizontal Padding */
+
+.padding-h-xs {
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+}
+
+.padding-h-sm {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+}
+
+.padding-h-md {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+.padding-h-lg {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+}
+
+.padding-h-xl,
 .padding-h {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
 }
 
-.padding-h-sub {
-    padding-left: 50px;
-    padding-right: 50px;
+/* Vertical Padding */
+
+.padding-v-xs {
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
 }
 
-.padding-top {
-    padding-top: 100px;
-}
-.padding-top-sub {
-    padding-top: 50px;
+.padding-v-sm {
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
 }
 
-.padding-bottom {
-    padding-bottom: 100px;
+.padding-v-md {
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
 }
 
+.padding-v-lg {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+}
+
+.padding-v-xl,
 .padding-v {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
 }
 
-.padding-v-sub {
-    padding-top: 50px;
-    padding-bottom: 50px;
+/* Top / Bottom only */
+
+.padding-top-xs {
+    padding-top: var(--spacing-xs);
 }
+.padding-top-sm {
+    padding-top: var(--spacing-sm);
+}
+.padding-top-md {
+    padding-top: var(--spacing-md);
+}
+.padding-top-lg {
+    padding-top: var(--spacing-lg);
+}
+.padding-top-xl,
+.padding-top {
+    padding-top: var(--spacing-xl);
+}
+
+.padding-bottom-xs {
+    padding-bottom: var(--spacing-xs);
+}
+.padding-bottom-sm {
+    padding-bottom: var(--spacing-sm);
+}
+.padding-bottom-md {
+    padding-bottom: var(--spacing-md);
+}
+.padding-bottom-lg {
+    padding-bottom: var(--spacing-lg);
+}
+.padding-bottom-xl,
+.padding-bottom {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* Utility */
 
 .expanded-between {
     justify-content: space-between;

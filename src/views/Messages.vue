@@ -1,12 +1,12 @@
 <template>
 	<SafeArea>
-		<div class="padding-v-sub padding-h-sub">
+		<div class="padding-v-lg padding-h-lg">
 			<h1>寄语</h1>
 			<p>提交寄语请前往 <RouterLink to="/dev">提交界面 -></RouterLink></p>
 		</div>
 		<hr>
 		<MessageCard
-			class="padding-v-sub padding-h-sub"
+			class="padding-h-lg padding-v-md"
 			v-for="msg in messages"
 			:key="msg.id"
 			:name="msg.name"
@@ -14,7 +14,7 @@
 			:content="msg.note"
 			:recipient="msg.recipient"
 		/>
-		<div class="hstack padding-h-sub" id="controls">
+		<div class="hstack padding-h-md" id="controls">
 			<button id="last-page-btn" @click="lastpage" :disabled="page <= 1">上一页</button>
 			<p>第 {{ page }} / {{ totalPages }}</p>
 			<button id="next-page-btn" @click="nextpage" :disabled="page >= totalPages">下一页</button>
@@ -34,15 +34,15 @@ const totalPages = ref(0);
 const page = ref(1);
 
 function load() {
-fetch(`${apiBaseUrl}/messages?limit=5&page=${page.value}`)
-	.then(res => res.json())
-	.then(res => {
-		messages.value = res.results
-		totalPages.value = res.totalPages
-	})
-	.catch(err => {
-		console.error("Failed to fetch messages:", err)
-	})
+	fetch(`${apiBaseUrl}/messages?limit=3&page=${page.value}`)
+		.then(res => res.json())
+		.then(res => {
+			messages.value = res.results
+			totalPages.value = res.totalPages
+		})
+		.catch(err => {
+			console.error("Failed to fetch messages:", err)
+		})
 }
 
 onMounted(() => {

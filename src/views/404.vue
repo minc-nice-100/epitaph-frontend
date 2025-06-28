@@ -6,6 +6,7 @@
         <h2>
             此处没有页面。
         </h2>
+        <p>如有任何疑问，请联系<a href="mailto:makabaka1880@outlook.com">makabaka1880@outlook.com -></a></p>
     </div>
 </template>
 

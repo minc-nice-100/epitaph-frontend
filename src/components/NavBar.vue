@@ -2,7 +2,7 @@
 	<nav class="navbar">
         <RouterLink to="/" class="nav-link">主页</RouterLink>
 		<RouterLink to="/dev" class="nav-link">生平</RouterLink>
-		<RouterLink to="/dev" class="nav-link">寄语</RouterLink>
+		<RouterLink to="/messages" class="nav-link">寄语</RouterLink>
 		<RouterLink to="/dev" class="nav-link">记忆</RouterLink>
 	</nav>
 </template>
