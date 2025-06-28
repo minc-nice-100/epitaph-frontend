@@ -27,11 +27,6 @@ ul {
     list-style: none;
 }
 
-:root {
-    --bg-gray: #aaa;
-    --light-cyan: #0aa;
-}
-
 body {
     font-family: 'JetBrains Mono', monospace;
     margin: 0;  /* Reset margin */
@@ -44,36 +39,6 @@ body {
 
 .heading-box {
     display: flex;
-}
-
-.padding-h {
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.padding-h-sub {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.padding-top {
-    padding-top: 100px;
-}
-.padding-top-sub {
-    padding-top: 50px;
-}
-
-.padding-bottom {
-    padding-bottom: 100px;
-}
-
-.padding-v {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.expanded-between {
-    justify-content: space-between;
 }
 
 ul {
