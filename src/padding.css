@@ -38,6 +38,11 @@ Makabaka1880, 2025. All rights reserved.
     padding-bottom: 100px;
 }
 
+.padding-v-sub {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .expanded-between {
     justify-content: space-between;
 }
