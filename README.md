@@ -1,5 +1,8 @@
 # Digital Epitaph - Frontend
 
+[![Build & Deploy Vue](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/build.yml/badge.svg)](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/build.yml)
+[![GitHub Pages Deploy](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/pages/pages-build-deployment)
+
 This repository contains the frontend source code for [James Li's Digital Memorial](https://jamesli.love), a personal tribute site built in memory of my father, 李璟 (James Li), who passed away on December 20, 2024.
 
 > Website under migration and maintainance, temporarily unavailable.
