@@ -9,6 +9,7 @@ Makabaka1880, 2025. All rights reserved.
 */
 
 @import url('padding.css');
+@import url('palette.css');
 
 html {
     scroll-behavior: smooth;
@@ -31,7 +32,7 @@ ul {
 
 body {
     font-family: 'JetBrains Mono', monospace;
-    margin: 0;  /* Reset margin */
+    margin: 0;
 }
 
 .hstack {
@@ -49,9 +50,9 @@ ul {
 
 hr {
     border: none;
-    height: 2px;
+    height: 1px;
     background-color: var(--bg-gray);
-    width: calc(100vw - 200px);
+    width: calc(100vw - 300px);
     margin: 20px auto;
 }
 

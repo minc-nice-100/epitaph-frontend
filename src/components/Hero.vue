@@ -12,7 +12,7 @@
 	width: 30vw;
 }
 
-@media screen and (min-aspect-ratio: 1.618) {
+@media screen and (min-aspect-ratio: 1.2) {
 
 	.index-h-layout {
 		display: flex;
@@ -28,7 +28,7 @@
 	}
 }
 
-@media screen and (max-aspect-ratio: 1.618) {
+@media screen and (max-aspect-ratio: 1.2) {
 	#heroimage {
 		width: 50vw;
 	}

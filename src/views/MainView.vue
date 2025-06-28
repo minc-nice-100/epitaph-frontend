@@ -2,6 +2,7 @@
     <SafeArea>
         <NavBar />
         <RouterView />
+        <hr />
         <FooterNote />
     </SafeArea>
 </template>

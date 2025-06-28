@@ -6,7 +6,7 @@
 
 <style scoped>
 .safe-area {
-    padding: 48px;
-    box-sizing: border-box;
+    padding: clamp(10px, 1%, 50px);
 }
+
 </style>

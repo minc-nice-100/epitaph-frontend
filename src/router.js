@@ -12,6 +12,15 @@ const routes = [
                 path: "messages",
                 component: () => import("./views/Messages.vue"),
             },
+            {
+                path: "dev",
+                component: () => import("./views/PageUnderDev.vue"),
+            },
+            {
+                path: ":pathMatch(.*)*",
+                name: "NotFound",
+                component: () => import("./views/404.vue"),
+            }
         ],
     },
 ];

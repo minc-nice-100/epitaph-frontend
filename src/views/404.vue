@@ -1,0 +1,14 @@
+<template>
+    <div class="padding-h padding-v">
+        <h1>
+            404 - Page Not Found
+        </h1>
+        <h2>
+            此处没有页面。
+        </h2>
+    </div>
+</template>
+
+<script setup lang="js">
+import '@/palette.css'
+</script>
