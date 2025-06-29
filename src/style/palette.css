@@ -8,7 +8,15 @@ epitaph/frontend/src/palette.css
 Makabaka1880, 2025. All rights reserved.
 */
 
-:root {
-    --bg-gray: #aaa;
+
+body {
+    --black-cyan: #011;
+    --dark-cyan: #033;
+    --reg-cyan: #066;
     --light-cyan: #0aa;
+    --dark-gray: #333;
+    --reg-gray: #666;
+    --caption-gray: #888;
+    --bg-gray: #aaa;
+    --light-gray: #eee;
 }
