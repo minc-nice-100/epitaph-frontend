@@ -5,7 +5,7 @@
 
 This repository contains the frontend source code for [James Li's Digital Memorial](https://jamesli.love), a personal tribute site built in memory of my father, 李璟 (James Li), who passed away on December 20, 2024.
 
-> Website under migration and maintainance, temporarily unavailable.
+> Website under migration and maintainance, some pages and services are temporarily unavailable.
 
 ## 🕯️ Remembrance
 
