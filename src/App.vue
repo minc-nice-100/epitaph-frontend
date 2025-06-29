@@ -1,15 +1,19 @@
 <script setup>
 import './style.css'
 import { apiBaseUrl } from '@/constants.mjs'
-fetch(`${apiBaseUrl}/grayscale/today`)
-    .then(res => res.json())
-    .then(res => {
-        if (res.gray) {
-            const style = document.createElement('style');
-            style.textContent = `html { filter: grayscale(100%); }`;
-            document.head.appendChild(style);
-        }
-    });
+import { onBeforeMount } from 'vue'
+
+onBeforeMount(() => {
+    fetch(`${apiBaseUrl}/grayscale/today`)
+        .then(res => res.json())
+        .then(res => {
+            if (res.gray) {
+                const style = document.createElement('style');
+                style.textContent = `html { filter: grayscale(100%); }`;
+                document.head.appendChild(style);
+            }
+        });
+});
 </script>
 
 <template>
