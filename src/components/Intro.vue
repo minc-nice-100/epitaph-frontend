@@ -6,7 +6,7 @@
         </div>
 		<ul>
 			<li><RouterLink to="/dev" class="link-main">生平 Lifetime -></RouterLink></li>
-			<li><RouterLink to="/message" class="link-main">寄语 Messages -></RouterLink></li>
+			<li><RouterLink to="/messages" class="link-main">寄语 Messages -></RouterLink></li>
 			<li><RouterLink to="/dev" class="link-main">记忆 Memories -></RouterLink></li>
 		</ul>
 	</div>
