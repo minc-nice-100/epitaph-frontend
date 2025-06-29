@@ -1,3 +1,5 @@
+<!-- @ABloom 这里交给你了 加油 -->
+
 <template>
 	<SafeArea>
 		<div class="padding-v-lg padding-h-lg">
