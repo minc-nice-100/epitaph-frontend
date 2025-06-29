@@ -1,49 +1,26 @@
+<!-- InputField.vue -->
 <template>
-	<p>{{ props.ques }}</p>
+	<p>{{ ques }}</p>
 	<input
-		:value="props.modelValue"
-		@input="$emit('update:modelValue', $event.target.value)"
-		:class="{ invalid: !isValid.value }"
+		v-model="updateValue"
 	/>
-	<p v-if="!isValid.value" class="error-text">Invalid format</p>
 </template>
 
-<script setup lang="js">
-import { ref, watch, defineEmits, defineProps } from 'vue';
+<script setup>
+import { defineProps, defineEmits, watch, toRef, computed } from 'vue';
 
-const props = defineProps({
-	ques: String,
-	modelValue: String,
-	regex: {
-		type: String,
-		required: false,
-		default: null
-	}
+const props = defineProps(['modelValue']);
+const emit = defineEmits(['update:modelValue']);
+
+const updateValue = computed({
+	get: () => props.modelValue, 
+	set: (val) => emit('update:modelValue', val)
 });
 
-const emit = defineEmits(['update:modelValue', 'update:isValid']);
-const isValid = ref(true);
+const modelValueRef = toRef(props, 'modelValue');
 
-watch(() => props.modelValue, (newVal) => {
-    if (!props.regex) {
-        isValid.value = true;
-    } else {
-        const re = new RegExp(props.regex);
-        isValid.value = re.test(newVal);
-    }
-    console.log(newVal);
-    emit('update:isValid', isValid.value);
+watch(modelValueRef, (newVal) => {
+	console.log('Input updated:', newVal);
 });
 
 </script>
-
-<style scoped>
-.invalid {
-	border-color: red;
-	outline: none;
-}
-.error-text {
-	color: red;
-	font-size: 0.9em;
-}
-</style>
