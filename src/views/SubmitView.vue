@@ -3,16 +3,20 @@
 		<div class="padding-v-lg padding-h-lg" id="ques-container">
 			<h1>寄语提交</h1>
 			
+			<p v-if="submitError" class="error-message">{{ submitError }}</p>
+			<p v-if="submitSuccess" class="success-message">您的寄语已经到达彼岸。在经过审核过后，将会在<RouterLink to="/messages">寄语区</RouterLink>展示。</p>
+
 			<!-- 第一步：填写姓名 -->
 			<InputField 
-				v-if="currentStep >= 1"
+				v-if="currentStep >= 1 && !submitSuccess"
+				ref="nameInput"
 				v-model="formData.name"
 				:ques="'1. 您的姓名'"
 				@update:modelValue="handleNameInput"
 			/>
 			
 			<!-- 第二步：选择收件人类型 -->
-			<div v-if="currentStep >= 2" class="recipient-type">
+			<div v-if="currentStep >= 2 && !submitSuccess" class="recipient-type" ref="recipientInput">
 				<h2>2. 接收者</h2>
 				<select 
 					v-model="formData.recipientType"
@@ -32,28 +36,25 @@
 			
 			<!-- 第三步：填写寄语内容 -->
 			<TextField 
-				v-if="currentStep === 3"
+				v-if="currentStep === 3 && !submitSuccess"
 				v-model="formData.note"
 				:ques="'寄语内容'"
-                placeholder="请写下您的寄语..."
+				placeholder="请写下您的寄语..."
+				ref="contentInput"
 				@update:modelValue="handleNoteInput"
 			/>
 			
 			<!-- 提交按钮 -->
 			<button 
-                id="submit-btn"
-				v-if="currentStep === 3 && formData.note.trim()"
+				id="submit-btn"
+				v-if="currentStep === 3 && formData.note.trim() && !submitSuccess"
 				@click="submitMessage"
 				:disabled="isSubmitting"
 				class="submit-button"
 			>
 				{{ isSubmitting ? '提交中...' : '提交寄语' }}
 			</button>
-			
-			<p v-if="submitError" class="error-message">{{ submitError }}</p>
-			<p v-if="submitSuccess" class="success-message">提交成功！</p>
 		</div>
-		<hr>
 	</SafeArea>
 </template>
 
@@ -62,6 +63,7 @@ import '../style/style.css'
 import { ref } from 'vue';
 import InputField from '../components/InputField.vue';
 import TextField from '../components/TextField.vue';
+import { nextTick } from 'vue';
 
 const currentStep = ref(1);
 const formData = ref({
@@ -69,7 +71,10 @@ const formData = ref({
 	recipientType: '',
 	note: ''
 });
-    
+const nameInput = ref(null);
+const recipientInput = ref(null);
+const contentInput = ref(null);
+	
 const recipientTypes = [
 	{ value: 'wife', label: '至妻子' },
 	{ value: 'children', label: '至子女' },
@@ -81,15 +86,19 @@ const isSubmitting = ref(false);
 const submitError = ref('');
 const submitSuccess = ref(false);
 
-const handleNameInput = (value) => {
+const handleNameInput = async (value) => {
 	if (value.trim()) {
 		currentStep.value = 2;
 	}
+	await nextTick();
+	recipientInput.value.scrollIntoView({ behavior: 'smooth', block: 'center' })
 };
 
-const selectRecipient = (type) => {
+const selectRecipient = async (type) => {
 	formData.value.recipientType = type;
 	currentStep.value = 3;
+	await nextTick();
+	contentInput.value.textarea.scrollIntoView({ behavior: 'smooth', block: 'center' })
 };
 
 const handleNoteInput = (_) => {
@@ -104,6 +113,7 @@ const submitMessage = async () => {
 		
 		// 验证表单
 		if (!formData.value.name.trim()) {
+			nameInput.value.textarea.classList.add('error-field');
 			throw new Error('请填写您的姓名');
 		}
 		if (!formData.value.recipientType) {
@@ -167,6 +177,7 @@ const submitMessage = async () => {
 	} catch (err) {
 		submitError.value = err.message;
 		console.error('提交错误:', err);
+		window.scrollTo({ top: 0, behavior: 'smooth' })
 	} finally {
 		isSubmitting.value = false;
 	}
@@ -181,5 +192,9 @@ const getRecipientLabel = (type) => {
 <style scoped>
 #submit-btn, #ques-container > :not(:first-child) {
 	margin-top: 80px;
+}
+
+.error-field {
+	border-color: red;
 }
 </style>
