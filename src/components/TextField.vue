@@ -1,10 +1,11 @@
 <template>
-	<div>
-		<h3>{{ ques }}</h3>
-		<input
-			v-model="updateValue"
-		/>
-	</div>
+    <div>
+        <h3>{{ ques }}</h3>
+        <textarea
+            :placeholder="placeholder"
+            v-model="updateValue"
+        />
+    </div>
 </template>
 
 <script setup>
@@ -12,6 +13,7 @@ import { computed } from 'vue';
 
 const props = defineProps({
 	modelValue: String,
+    placeholder: String,
 	ques: String
 });
 

@@ -1,25 +1,25 @@
 <template>
 	<SafeArea>
-		<div class="padding-v-lg padding-h-lg">
+		<div class="padding-v-lg padding-h-lg" id="ques-container">
 			<h1>寄语提交</h1>
 			
 			<!-- 第一步：填写姓名 -->
 			<InputField 
 				v-if="currentStep >= 1"
 				v-model="formData.name"
-				:ques="'您的姓名'"
+				:ques="'1. 您的姓名'"
 				@update:modelValue="handleNameInput"
 			/>
 			
 			<!-- 第二步：选择收件人类型 -->
 			<div v-if="currentStep >= 2" class="recipient-type">
-				<p>收件人</p>
+				<h2>2. 接收者</h2>
 				<select 
 					v-model="formData.recipientType"
 					@change="selectRecipient(formData.recipientType)"
 					class="recipient-select"
 				>
-					<option value="" disabled selected>请选择收件人</option>
+					<option value="" disabled selected>请选择接收者</option>
 					<option
 						v-for="type in recipientTypes"
 						:key="type.value"
@@ -31,15 +31,17 @@
 			</div>
 			
 			<!-- 第三步：填写寄语内容 -->
-			<InputField 
+			<TextField 
 				v-if="currentStep === 3"
 				v-model="formData.note"
 				:ques="'寄语内容'"
+                placeholder="请写下您的寄语..."
 				@update:modelValue="handleNoteInput"
 			/>
 			
 			<!-- 提交按钮 -->
 			<button 
+                id="submit-btn"
 				v-if="currentStep === 3 && formData.note.trim()"
 				@click="submitMessage"
 				:disabled="isSubmitting"
@@ -59,6 +61,7 @@
 import '../style/style.css'
 import { ref } from 'vue';
 import InputField from '../components/InputField.vue';
+import TextField from '../components/TextField.vue';
 
 const currentStep = ref(1);
 const formData = ref({
@@ -66,7 +69,7 @@ const formData = ref({
 	recipientType: '',
 	note: ''
 });
-
+    
 const recipientTypes = [
 	{ value: 'wife', label: '至妻子' },
 	{ value: 'children', label: '至子女' },
@@ -176,4 +179,7 @@ const getRecipientLabel = (type) => {
 </script>
 
 <style scoped>
+#submit-btn, #ques-container > :not(:first-child) {
+	margin-top: 80px;
+}
 </style>

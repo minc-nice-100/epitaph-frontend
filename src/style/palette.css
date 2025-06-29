@@ -14,6 +14,9 @@ body {
     --dark-cyan: #033;
     --reg-cyan: #066;
     --light-cyan: #0aa;
+
+    --cold-shadow-tinted: rgba(72, 187, 183, 0.15);
+
     --dark-gray: #333;
     --reg-gray: #666;
     --caption-gray: #888;
