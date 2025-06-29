@@ -2,28 +2,25 @@
 <template>
 	<p>{{ ques }}</p>
 	<input
-		:value="modelValue"
-		@input="handleInput"
+		v-model="updateValue"
 	/>
 </template>
 
 <script setup>
-import { defineProps, defineEmits, watch, toRef, onMounted } from 'vue';
+import { defineProps, defineEmits, watch, toRef, computed } from 'vue';
 
-const props = defineProps({
-	ques: String,
-	modelValue: String
-});
-
+const props = defineProps(['modelValue']);
 const emit = defineEmits(['update:modelValue']);
 
-function handleInput(event) {
-	emit('update:modelValue', event.target.value);
-}
+const updateValue = computed({
+	get: () => props.modelValue, 
+	set: (val) => emit('update:modelValue', val)
+});
 
 const modelValueRef = toRef(props, 'modelValue');
 
 watch(modelValueRef, (newVal) => {
 	console.log('Input updated:', newVal);
 });
+
 </script>
