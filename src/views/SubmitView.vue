@@ -88,7 +88,7 @@ const selectRecipient = (type) => {
 	currentStep.value = 3;
 };
 
-const handleNoteInput = (value) => {
+const handleNoteInput = (_) => {
 	// 无需改变currentStep，仅用于触发响应式更新
 };
 
