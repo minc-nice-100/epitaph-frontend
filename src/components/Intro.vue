@@ -11,8 +11,10 @@
 		</ul>
 	</div>
 </template>
-
+<script setup lang="js">
+</script>
 <style scoped>
+@import url('@/style.css');
 .responsive-hstack {
     display: flex;
     flex-direction: row;

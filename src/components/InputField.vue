@@ -31,7 +31,7 @@ watch(() => props.modelValue, (newVal) => {
         const re = new RegExp(props.regex);
         isValid.value = re.test(newVal);
     }
-    console.log(newVal)
+    console.log(newVal);
     emit('update:isValid', isValid.value);
 });
 

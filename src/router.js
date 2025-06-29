@@ -10,7 +10,11 @@ const routes = [
             { path: "", component: HomeView },
             {
                 path: "messages",
-                component: () => import("./views/Messages.vue"),
+                component: () => import("./views/MessagesView.vue"),
+            },
+            {
+                path: "submit",
+                component: () => import("./views/SubmitView.vue"),
             },
             {
                 path: "dev",
