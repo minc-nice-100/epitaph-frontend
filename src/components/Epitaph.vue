@@ -7,7 +7,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { apiBaseUrl } from '@/constants.mjs'
+import { apiBaseUrl } from '../constants.mjs'
 
 const epitaph = ref('')
 

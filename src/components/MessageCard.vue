@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="js">
-import '@/style.css'
+import '../style/style.css'
 defineProps({
     name: String,
     date: String,

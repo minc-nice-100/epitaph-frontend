@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import '@/style.css'
+import '../style/style.css'
 import SafeArea from '../components/SafeArea.vue';
 import MessageCard from '../components/MessageCard.vue';
 import { apiBaseUrl } from '../constants.mjs';

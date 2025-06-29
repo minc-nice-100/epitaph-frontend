@@ -56,6 +56,7 @@
 </template>
 
 <script setup>
+import '../style/style.css'
 import { ref } from 'vue';
 import InputField from '../components/InputField.vue';
 
