@@ -1,6 +1,6 @@
 <script setup>
-import './style.css'
-import { apiBaseUrl } from '@/constants.mjs'
+import './style/style.css'
+import { apiBaseUrl } from './constants.mjs'
 import { ref, onBeforeMount } from 'vue'
 
 const grayscaleReady = ref(false);

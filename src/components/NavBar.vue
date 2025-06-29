@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import '@/style.css';
+import '../style/style.css';
 </script>
 
 <style scoped>

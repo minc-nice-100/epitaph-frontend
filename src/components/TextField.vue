@@ -1,11 +1,12 @@
 <template>
-	<div>
-		<h3>{{ ques }}</h3>
-		<input
+    <div>
+        <h3>{{ ques }}</h3>
+        <textarea
             ref="textarea"
-			v-model="updateValue"
-		/>
-	</div>
+            :placeholder="placeholder"
+            v-model="updateValue"
+        />
+    </div>
 </template>
 
 <script setup>
@@ -13,6 +14,7 @@ import { computed, ref } from 'vue';
 
 const props = defineProps({
 	modelValue: String,
+	placeholder: String,
 	ques: String
 });
 
@@ -28,5 +30,4 @@ const textarea = ref(null);
 defineExpose({
 	textarea
 });
-
 </script>

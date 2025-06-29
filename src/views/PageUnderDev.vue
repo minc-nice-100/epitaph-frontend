@@ -17,5 +17,5 @@
 </template>
 
 <script setup lang="js">
-import '@/palette.css'
+import '../style/style.css'
 </script>

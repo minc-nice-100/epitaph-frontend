@@ -1,7 +1,7 @@
 <template>
 	<div class="heading-box padding-h padding-top">
 		<div class="index-h-layout">
-			<img src="@/assets/hero.webp" id="heroimage" />
+			<img src="../assets/hero.webp" id="heroimage" />
 			<HeroHeadline id="heroheadline-container"/>
 		</div>
 	</div>
@@ -37,6 +37,6 @@
 </style>
 
 <script setup>
-import '@/style.css';
+import '../style/style.css';
 import HeroHeadline from './HeroHeadline.vue';
 </script>

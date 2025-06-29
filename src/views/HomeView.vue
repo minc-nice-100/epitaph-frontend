@@ -9,10 +9,10 @@
 </template>
 
 <script setup>
-import '@/style.css'
-import Hero from '@/components/Hero.vue'
-import Intro from '@/components/Intro.vue'
-import Epitaph from '@/components/Epitaph.vue'
+import '../style/style.css'
+import Hero from '../components/Hero.vue'
+import Intro from '../components/Intro.vue'
+import Epitaph from '../components/Epitaph.vue'
 </script>
 
 <style lang="css" scoped>

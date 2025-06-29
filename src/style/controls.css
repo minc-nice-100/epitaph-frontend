@@ -1,0 +1,102 @@
+/*
+Created by Segian L. on Jun. 29.
+Last Updated by Sean L. on Jun. 30.
+
+Epitaph - Frontend
+src/controls.css
+
+Makabak1880, 2025. All rights reserved.
+*/
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 500;
+	font-size: 15px;
+	padding: 8px 18px;
+	background: transparent;
+	border: none;
+	border-bottom: var(--dark-cyan) 1.5px solid;
+	outline: none;
+	color: var(--text-color);
+	width: 100%;
+	transition: 
+		border-color 0.3s ease-in-out,
+		color 0.3s ease-in-out,
+		box-shadow 0.3s ease;
+}
+
+button:hover,
+input:hover,
+select:hover,
+textarea:hover {
+	border-bottom: var(--light-cyan) 2px solid;
+	box-shadow: 0 2px 8px var(--cold-shadow-tinted);
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-bottom: var(--light-cyan) 2px solid;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+	border-bottom: 1.5px solid var(--disabled-color);
+	color: var(--disabled-color);
+	cursor: not-allowed;
+}
+
+textarea:focus {
+	box-shadow: 0 0 5px 2px rgba(72, 187, 183, 0.15);
+}
+
+button {
+	cursor: pointer;
+	background-color: var(--background-color, transparent);
+	width: auto;
+	border-radius: 7px;
+	border: 1.5px solid var(transparent);
+	border-bottom: var(--dark-cyan) 2px solid;
+	box-shadow: 0 0 4px 1px rgba(72, 187, 183, 0.15);
+	transition: box-shadow 0.1s ease-in-out
+				border 0.1s ease-in-out;
+}
+
+button:hover {
+	box-shadow: 0 0 4px 2px rgba(72, 187, 183, 0.35);
+}
+
+button:disabled {
+	color: var(--bg-gray);
+	box-shadow: none;
+	border: none;
+}
+button:disabled:hover {
+	color: var(--bg-gray);
+	border: none;
+}
+
+textarea {
+	min-height: 120px;
+	line-height: 1.6;
+	resize: vertical;
+}
+
+textarea::placeholder {
+	color: #7f9c9c;
+	transition: opacity 0.3s ease;
+}
+
+textarea:focus::placeholder {
+	opacity: 0.5;
+}
