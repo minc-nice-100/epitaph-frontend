@@ -58,6 +58,11 @@ function parseRotation(input) {
 const rotation = parseRotation(props.direction)
 </script>
 <style lang="css" scoped>
+
+.arrow {
+	vertical-align: middle;
+}
+
 a .arrow {
 	--rotation: 0deg;
 	transform: rotate(var(--rotation)) translate(0, 0);
@@ -65,6 +70,8 @@ a .arrow {
 }
 
 a:hover .arrow {
-	transform: rotate(var(--rotation)) translate(5px, 0);
+	transform: rotate(var(--rotation)) translate(0.33em, 0);
 }
+
+
 </style>
