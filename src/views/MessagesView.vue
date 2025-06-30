@@ -2,7 +2,7 @@
 	<SafeArea>
 		<div class="padding-v-lg padding-h-lg">
 			<h1>寄语</h1>
-			<p>提交寄语请前往 <RouterLink to="/submit">提交界面 -></RouterLink></p>
+			<p>提交寄语请前往 <RouterLink to="/submit">提交界面 <Arrow /></RouterLink></p>
 		</div>
 		<hr>
 		<MessageCard
@@ -25,6 +25,7 @@
 <script setup>
 import '../style/style.css'
 import SafeArea from '../components/SafeArea.vue';
+import Arrow from '../components/Arrow.vue';
 import MessageCard from '../components/MessageCard.vue';
 import { apiBaseUrl } from '../constants.mjs';
 import { ref, onMounted, watch } from 'vue';

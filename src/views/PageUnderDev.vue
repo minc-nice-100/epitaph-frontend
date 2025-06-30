@@ -7,7 +7,7 @@
             页面仍在开发中。
         </h2>
 
-        <p>如有任何疑问，请联系<a href="mailto:makabaka1880@outlook.com">makabaka1880@outlook.com -></a></p>
+        <p>如有任何疑问，请联系<a href="mailto:makabaka1880@outlook.com">makabaka1880@outlook.com <Arrow /></a></p>
 
         <div class="padding-v-md">
             <img src="https://github.com/makabaka1880/epitaph-frontend/actions/workflows/build.yml/badge.svg" alt="Build Vue" style="max-width: 100%; padding-right: 10px;">
@@ -18,4 +18,5 @@
 
 <script setup lang="js">
 import '../style/style.css'
+import Arrow from '../components/Arrow.vue';
 </script>
