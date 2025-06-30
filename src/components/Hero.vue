@@ -1,5 +1,5 @@
 <template>
-	<div class="heading-box padding-h padding-top">
+	<div class="heading-box margin-h margin-top">
 		<div class="index-h-layout">
 			<img src="../assets/hero.webp" id="heroimage" />
 			<HeroHeadline class="heroheadline-container"/>

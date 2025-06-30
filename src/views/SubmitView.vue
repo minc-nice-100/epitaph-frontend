@@ -1,6 +1,6 @@
 <template>
 	<SafeArea>
-		<div class="padding-v-lg padding-h-lg" id="ques-container">
+		<div class="margin-v-lg margin-h-lg" id="ques-container">
 			<h1>寄语提交</h1>
 			
 			<p v-if="submitError" class="error-message">{{ submitError }}</p>

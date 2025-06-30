@@ -1,12 +1,12 @@
 <template>
 	<SafeArea>
-		<div class="padding-v-lg padding-h-lg">
+		<div class="margin-v-lg margin-h-lg">
 			<h1>寄语</h1>
 			<p>提交寄语请前往 <RouterLink to="/submit">提交界面 <Arrow /></RouterLink></p>
 		</div>
 		<hr>
 		<MessageCard
-			class="padding-h-lg padding-v-md"
+			class="margin-h-lg margin-v-md"
 			v-for="msg in messages"
 			:key="msg.id"
 			:name="msg.name"
@@ -14,7 +14,7 @@
 			:content="msg.note"
 			:recipient="msg.recipient"
 		/>
-		<div class="hstack padding-h-md" id="controls">
+		<div class="hstack margin-h-md" id="controls">
 			<button id="last-page-btn" @click="lastpage" :disabled="page <= 1">上一页</button>
 			<p>第 {{ page }} / {{ totalPages }}</p>
 			<button id="next-page-btn" @click="nextpage" :disabled="page >= totalPages">下一页</button>

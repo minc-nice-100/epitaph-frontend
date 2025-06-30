@@ -1,5 +1,5 @@
 <template>
-	<div id="intro" class="introduction-box padding-v padding-h responsive-hstack">
+	<div id="intro" class="introduction-box margin-v margin-h responsive-hstack">
         <div class="intro-heading-box">
             <h2>李璟的电子墓碑</h2>
             <i>James Li's Digital Epitaph</i>

@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <Hero class="padding-v"/>
+        <Hero class="margin-v"/>
         <div class="content">
             <Intro id="intro"/>
             <Epitaph />

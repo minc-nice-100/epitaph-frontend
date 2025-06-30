@@ -1,5 +1,5 @@
 <template>
-    <div class="padding-h padding-v">
+    <div class="margin-h margin-v">
         <h1>
             404 - Page Not Found
         </h1>

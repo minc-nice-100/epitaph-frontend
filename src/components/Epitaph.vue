@@ -1,5 +1,5 @@
 <template>
-    <div id="epitaph" class="introduction-box padding-bottom padding-top-md padding-h">
+    <div id="epitaph" class="introduction-box margin-bottom margin-top-md margin-h">
         <h2>追忆</h2>
         <p id="epitaph-display">{{ epitaph }}</p>
     </div>
