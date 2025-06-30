@@ -66,12 +66,11 @@ const rotation = parseRotation(props.direction)
 a .arrow {
 	--rotation: 0deg;
 	transform: rotate(var(--rotation)) translate(0, 0);
-	transition: transform 0.3s ease-in-out;
+	transition: transform 0.3s ease;
 }
 
 a:hover .arrow {
-	transform: rotate(var(--rotation)) translate(0.33em, 0);
+	transform: rotate(var(--rotation)) translate(0.1em, 0);
 }
-
 
 </style>
