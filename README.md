@@ -27,6 +27,14 @@ You are welcome to **clone**, **fork**, or even contribute improvements to this 
 
 If you encounter a serious technical problem or have a question, feel free to contact me directly at [makabaka1880@outlook.com](mailto:makabaka1880@outlook.com).
 
+## 📄 License
+
+This project is licensed under the [**Creative Commons Attribution‑NonCommercial 4.0 International (CC BY‑NC 4.0)**](https://creativecommons.org/licenses/by-nc/4.0/).  
+You are free to **share** (copy and redistribute) and **adapt** (remix, transform, build upon) the code — but only for **non‑commercial** purposes, and with proper attribution.  
+
+Please **do not** use this project for commercial purposes, as it is a personal memorial site.
+
+
 Thank you for visiting.
 
 — Sean, son of James
