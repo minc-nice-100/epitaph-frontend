@@ -5,14 +5,17 @@
             <i>James Li's Digital Epitaph</i>
         </div>
 		<ul>
-			<li><RouterLink to="/dev" class="link-main">生平 Lifetime -></RouterLink></li>
-			<li><RouterLink to="/messages" class="link-main">寄语 Messages -></RouterLink></li>
-			<li><RouterLink to="/dev" class="link-main">记忆 Memories -></RouterLink></li>
+			<li><RouterLink to="/dev" class="link-main">生平 Lifetime <Arrow /></RouterLink></li>
+			<li><RouterLink to="/messages" class="link-main">寄语 Messages <Arrow /></RouterLink></li>
+			<li><RouterLink to="/dev" class="link-main">记忆 Memories <Arrow /></RouterLink></li>
 		</ul>
 	</div>
 </template>
+
 <script setup lang="js">
+import Arrow from './Arrow.vue';
 </script>
+
 <style scoped>
 @import url('../style/style.css');
 .responsive-hstack {

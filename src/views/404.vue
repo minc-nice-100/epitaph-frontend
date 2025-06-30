@@ -6,10 +6,11 @@
         <h2>
             此处没有页面。
         </h2>
-        <p>如有任何疑问，请联系<a href="mailto:makabaka1880@outlook.com">makabaka1880@outlook.com -></a></p>
+        <p>如有任何疑问，请联系<a href="mailto:makabaka1880@outlook.com">makabaka1880@outlook.com <Arrow /></a></p>
     </div>
 </template>
 
 <script setup lang="js">
 import '../style/style.css'
+import Arrow from '../components/Arrow.vue';
 </script>

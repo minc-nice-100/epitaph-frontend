@@ -3,7 +3,7 @@
         <div class="hstack expanded-between" style="width: 40vw;">
             <h1 id="hero-heading">李璟</h1>
             <h1 id="hero-heading">
-                <a href="#intro" class="oscillate-10">-></a>
+                <a href="#intro" class="oscillate-10"><Arrow /></a>
             </h1>
         </div>
         <p id="hero-headline">在一个和平时一样的清晨，有的人留在了昨天。</p>
@@ -25,4 +25,5 @@
 
 <script setup lang="js">
 import '../style/style.css';
+import Arrow from './Arrow.vue';
 </script>
