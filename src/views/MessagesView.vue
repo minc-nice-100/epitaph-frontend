@@ -38,7 +38,10 @@ function load() {
 	fetch(`${apiBaseUrl}/messages?limit=3&page=${page.value}`)
 		.then(res => res.json())
 		.then(res => {
-			messages.value = res.results
+			messages.value = res.results.map(msg => ({
+				...msg,
+				createdAt: new Date(msg.createdAt)
+			}))
 			totalPages.value = res.totalPages
 		})
 		.catch(err => {

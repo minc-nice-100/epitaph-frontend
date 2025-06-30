@@ -66,7 +66,7 @@ button {
 	width: auto;
 	border-radius: 7px;
 	border: 1.5px solid var(transparent);
-	border-bottom: var(--dark-cyan) 2px solid;
+    border-bottom: 2px solid rgba(var(--light-cyan-rgb), 0.5); /* 50% transparent using var */
 	box-shadow: 0 0 4px 1px rgba(72, 187, 183, 0.15);
 	transition: box-shadow 0.1s ease-in-out
 				border 0.1s ease-in-out;

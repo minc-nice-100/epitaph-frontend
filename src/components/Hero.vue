@@ -2,7 +2,7 @@
 	<div class="heading-box padding-h padding-top">
 		<div class="index-h-layout">
 			<img src="../assets/hero.webp" id="heroimage" />
-			<HeroHeadline id="heroheadline-container"/>
+			<HeroHeadline class="heroheadline-container"/>
 		</div>
 	</div>
 </template>
@@ -13,13 +13,12 @@
 }
 
 @media screen and (min-aspect-ratio: 1.2) {
-
 	.index-h-layout {
 		display: flex;
 		align-items: center;
 	}
 
-	#heroheadline-container {
+	.heroheadline-container {
 		margin-left: 100px;
 	}
 
@@ -31,6 +30,9 @@
 @media screen and (max-aspect-ratio: 1.2) {
 	#heroimage {
 		width: 50vw;
+	}
+	.heroheadline-container {
+		margin-top: 10vw;
 	}
 }
 
