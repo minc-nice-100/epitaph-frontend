@@ -1,15 +1,14 @@
 <template>
 	<svg
+		class="arrow"
 		:width="size"
 		:height="size"
 		viewBox="0 0 24 24"
-		:style="{ transform: `rotate(${rotation}deg)`, verticalAlign: 'middle' }"
+		:style="{ '--rotation': `${-rotation}deg` }"
 		xmlns="http://www.w3.org/2000/svg"
 		aria-hidden="true"
 		role="img"
 	>
-
-
 		<path
 			d="M4 12 L20 12 M14 6 L20 12 L14 18"
 			stroke="currentColor"
@@ -58,3 +57,14 @@ function parseRotation(input) {
 
 const rotation = parseRotation(props.direction)
 </script>
+<style lang="css" scoped>
+a .arrow {
+	--rotation: 0deg;
+	transform: rotate(var(--rotation)) translate(0, 0);
+	transition: transform 0.3s ease-in-out;
+}
+
+a:hover .arrow {
+	transform: rotate(var(--rotation)) translate(5px, 0);
+}
+</style>
