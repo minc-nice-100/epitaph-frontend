@@ -21,5 +21,8 @@ import Epitaph from '../components/Epitaph.vue'
     flex-direction: column;
     align-items: center;
 }
+.content {
+    width: 100%;
+}
 
 </style>
