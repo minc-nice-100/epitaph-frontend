@@ -10,9 +10,9 @@
 		<p>如有任何疑问，请联系<a href="mailto:makabaka1880@outlook.com">makabaka1880@outlook.com <Arrow /></a></p>
 		<hr class="margin-v-lg"/>
 		<h3>贡献代码</h3>
-		<div class="margin-v-sm">
-			<Badge repo="epitaph-frontend" badge="build.yml" />
-			<Badge repo="epitaph-frontend" badge="pages/
+		<div class="margin-v-sm h-stack">
+			<Badge class="badge" repo="epitaph-frontend" badge="build.yml" />
+			<Badge class="badge" repo="epitaph-frontend" badge="pages/
 			pages-build-deployment" />
 		</div>
 		<p>
@@ -48,7 +48,7 @@ import Badge from '../components/Badge.vue';
 </script>
 
 <style lang="css" scoped>
-img.badge {
-	padding-right: 0.5em;
+.badge {
+	padding: 0.5em;
 }
 </style>
