@@ -131,7 +131,7 @@ const submitMessage = async () => {
 		};
 
 		// 调用API
-		const response = await fetch(`${apiBaseUrl}/messages`, {
+		const response = await fetch(`https://api.jamesli.love/messages`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
