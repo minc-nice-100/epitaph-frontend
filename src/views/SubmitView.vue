@@ -130,9 +130,6 @@ const submitMessage = async () => {
 			recipient: getRecipientLabel(formData.value.recipientType)
 		};
 
-		// API基础URL
-		const apiBaseUrl = import.meta.env.VITE_API_URL || '';
-		
 		// 调用API
 		const response = await fetch(`${apiBaseUrl}/messages`, {
 			method: 'POST',
