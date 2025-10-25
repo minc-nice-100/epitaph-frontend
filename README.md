@@ -1,4 +1,6 @@
-# Digital Epitaph - Frontend
+# Digital Epitaph - Frontend (Authorized Fork for Deployment)
+
+> **Note**: This is an authorized fork for deployment purposes, created with the original author's permission. The original repository can be found at [makabaka1880/epitaph-frontend](https://github.com/makabaka1880/epitaph-frontend).
 
 [![Build & Deploy Vue](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/build.yml/badge.svg)](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/build.yml)
 [![GitHub Pages Deploy](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/makabaka1880/epitaph-frontend/actions/workflows/pages/pages-build-deployment)
@@ -25,7 +27,9 @@ May love and memory live on.
 
 You are welcome to **clone**, **fork**, or even contribute improvements to this site. This is, however, a deeply personal memorial — so I kindly ask that you **avoid opening issues for minor suggestions or aesthetic nitpicks**. Please be thoughtful and considerate when engaging with this project.
 
-If you encounter a serious technical problem or have a question, feel free to contact me directly at [makabaka1880@outlook.com](mailto:makabaka1880@outlook.com).
+If you encounter a serious technical problem or have a question, feel free to contact the deployment administrator at [admin@itedev.com](mailto:admin@itedev.com).
+
+For matters related to the original content and memorial, please contact the original author at [makabaka1880@outlook.com](mailto:makabaka1880@outlook.com).
 
 ## 📄 License
 
@@ -33,7 +37,6 @@ This project is licensed under the [**Creative Commons Attribution‑NonCommerci
 You are free to **share** (copy and redistribute) and **adapt** (remix, transform, build upon) the code — but only for **non‑commercial** purposes, and with proper attribution.  
 
 Please **do not** use this project for commercial purposes, as it is a personal memorial site.
-
 
 Thank you for visiting.
 
